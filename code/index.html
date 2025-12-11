@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Ping-Pong</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+
+    <div id="menu">
+        <h1 class="logo">PING • PONG</h1>
+
+        <div class="menu-section">
+            <label>Game Mode</label>
+            <select id="gameMode">
+                <option value="pvp">Player vs Player</option>
+                <option value="cpu">Player vs CPU</option>
+            </select>
+        </div>
+
+        <div class="menu-section">
+            <label>Pong Theme</label>
+            <select id="themeSelect">
+                <option value="classic">Classic</option>
+                <option value="neon">Neon</option>
+                <option value="retro">Retro Grid</option>
+                <option value="minimal">Minimal</option>
+            </select>
+        </div>
+
+        <div class="menu-section">
+            <label>CPU Difficulty</label>
+            <select id="cpuLevel">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="menu-section">
+            <label>Win Score</label>
+            <select id="winScore">
+                <option value="3">3</option>
+                <option value="5" selected>5</option>
+                <option value="7">7</option>
+            </select>
+        </div>
+
+        <button id="startGameBtn">Start Game</button>
+        <button id="themeToggle">Light/Dark</button>
+    </div>
+
+
+    <div id="gameContainer" class="hidden">
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <div id="scoreboard">
+            <span id="leftScore">0</span> : <span id="rightScore">0</span>
+        </div>
+
+        <div id="winnerMessage" class="hidden"></div>
+
+        <button id="startRoundBtn">Start Round</button>
+
+        <div id="mobileControls">
+            <div id="touchUp"></div>
+            <div id="touchDown"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

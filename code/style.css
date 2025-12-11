@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    transition: background 0.4s, color 0.4s;
+}
+
+body.light { background: #eee; color: #222; }
+body.dark { background: #111; color: #eee; }
+
+.hidden { display: none; }
+
+#menu { text-align: center; padding-top: 40px; }
+
+.logo {
+    font-size: 48px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.menu-section { margin: 15px auto; }
+
+select, button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+#gameContainer { text-align: center; }
+
+#gameCanvas {
+    margin-top: 20px;
+    border: 3px solid #444;
+    background: black;
+}
+
+#scoreboard {
+    font-size: 32px;
+    margin: 15px;
+}
+
+#winnerMessage {
+    font-size: 30px;
+    margin: 20px;
+}
+
+#startRoundBtn {
+    padding: 10px 25px;
+    font-size: 18px;
+}
+
+/* THEMES */
+.theme-classic #gameCanvas { background: black; }
+
+.theme-neon #gameCanvas {
+    background: black;
+    box-shadow: 0 0 20px #0ff inset;
+}
+
+.theme-retro #gameCanvas {
+    background: #101018;
+    background-image: linear-gradient(#181828 2px, transparent 2px),
+                      linear-gradient(90deg, #181828 2px, transparent 2px);
+    background-size: 50px 50px;
+}
+
+.theme-minimal #gameCanvas {
+    background: #fff;
+    border-color: #ccc;
+}
+
+/* MOBILE CONTROLS */
+#mobileControls {
+    display: none;
+}
+
+@media(max-width: 900px) {
+    #mobileControls {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        height: 150px;
+    }
+    #touchUp, #touchDown {
+        flex: 1;
+        background: rgba(0,0,0,0.3);
+    }
+}
